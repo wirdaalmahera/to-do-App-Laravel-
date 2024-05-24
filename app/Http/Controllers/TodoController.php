@@ -97,7 +97,7 @@ class TodoController extends Controller
         return view('dashboard.complated', compact('todos'));
     }
 
-    public function updateComplated( $id)
+    public function updateComplated($id)
     {
         Todo::where('id', $id)->update([
             'status' => 1,

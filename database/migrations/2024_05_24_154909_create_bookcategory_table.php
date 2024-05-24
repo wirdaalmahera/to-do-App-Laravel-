@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('bookcategory', function (Blueprint $table) {
             $table->id();
-            $table->integer('book_id');
-            $table->integer('category_id');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
+            $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('category_id');
+            $table->timestamps(); // Ini akan menambahkan kolom created_at dan updated_at secara otomatis
         });
     }
+
     /**
      * Reverse the migrations.
      *
